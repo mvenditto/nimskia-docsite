@@ -1,4 +1,7 @@
 <!-- docs/_sidebar.md -->
+
+- [API Reference](https://mvenditto.github.io/nimskia/index.html)
+
 - Getting started
 
   - [Introduction](getting_started/intro.md)
