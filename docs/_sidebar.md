@@ -10,5 +10,6 @@
   - [Running Tests / Examples](getting_started/tests_and_examples.md)
   - [Quickstart](getting_started/peek.md)
 
-- API
-  - [Overview](api/overview.md)
+- API Samples
+  - [SKCanvas](api/SKCanvas.md)
+  - [SKBitmap](api/SKBitmap.md)
