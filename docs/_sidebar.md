@@ -11,5 +11,7 @@
   - [Quickstart](getting_started/peek.md)
 
 - API Samples
-  - [SKCanvas](api/SKCanvas.md)
+  - [Miscellanneous](api/misc.md)
   - [SKBitmap](api/SKBitmap.md)
+  - [SKCanvas](api/SKCanvas.md)
+  - [SKSurface](api/SKSurface.md)
