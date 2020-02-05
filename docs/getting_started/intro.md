@@ -7,11 +7,3 @@ The library is composed of two main pieces:
 2. a more Nim-friendly api based on the above wrapper
 
 note: the api is heavily inspired by the SkiaSharp project.
-
-## 🔥 News / Notes 🔥
-
-- 
-  > ⚠️ enabled compilation on **Windows**.
-  > Most of the examples probably will not work because
-  > the default configuration was tuned to work on Linux.(i expect SkSurface to be nil in most cases)
-  >. additional fixes may be needed. More to come.
