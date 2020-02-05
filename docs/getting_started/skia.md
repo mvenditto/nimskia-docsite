@@ -1,5 +1,7 @@
 ## Building Skia
 
+## Building on Linux
+
 ```bash
 git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git
 cd skia
@@ -23,3 +25,14 @@ references:
 
 - [https://github.com/mono/SkiaSharp/wiki/Building-SkiaSharp]()
 - [https://skia.org/user/build]()
+
+> ℹ️ Starting from version **1.68.x** linux binaries should also be included
+> in the SkiaSharp nuget package
+
+## Getting Skia on Windows
+
+Extract a pre-build dll from SkiaSharp nuget package.
+
+see:
+- [https://github.com/mono/SkiaSharp/wiki/SkiaSharp-with-Python]()
+- [https://www.nuget.org/packages/SkiaSharp/]()
