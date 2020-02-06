@@ -32,6 +32,8 @@ references:
 ## Getting Skia on Windows
 
 Extract a pre-build dll from SkiaSharp nuget package.
+> e.g https://www.nuget.org/api/v2/package/SkiaSharp/1.68.1.1 <br>
+> skiasharp.1.68.1.1\runtimes\win-x64\native\libSkiaSharp.dll > libskia.dll
 
 see:
 - [https://github.com/mono/SkiaSharp/wiki/SkiaSharp-with-Python]()
