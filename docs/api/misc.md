@@ -2,6 +2,8 @@
 
 ## Ripple animation
 
+[*source*](https://github.com/mvenditto/nimskia/blob/master/nimskia/example/circle_animation.nim)
+
 ```nim
 import ../nimskia/[
   sk_canvas, 

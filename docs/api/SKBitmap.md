@@ -27,6 +27,8 @@ proc readBitmapStream(path: string): SKBitmap =
 
 ## Drawing to a canvas
 
+[*source*](https://github.com/mvenditto/nimskia/blob/master/nimskia/example/bitmap_basic.nim)
+
 ```nim
 var bitmap = readBitmapStream("resources/images/skia.png")
 let imageHeight = bitmap.info.height
@@ -36,6 +38,8 @@ canvas.drawBitmap(bitmap, 4, h / 2.0 - imageHeight.float / 2.0)
 ![](_images/sample__bitmap_basics.png ':size=256x256')
 
 ## Drawing and annotating
+
+[*source*](https://github.com/mvenditto/nimskia/blob/master/nimskia/example/bitmap_annotation.nim)
 
 ```nim
 var bitmap = readBitmapStream("resources/images/skia.png")
