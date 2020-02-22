@@ -52,6 +52,13 @@ proc drawBox(canvas: SKCanvas, paint: SKPaint) =
   canvas.drawVertices(TriangleFan, vertices, colors, paint)
 ```
 
+### Setup texture
+
+```nim
+let bmp = decodeBitmap("resources/images/plasma.png")
+paint.shader = newBitmapShader(bmp)
+```
+
 ### Drawing a textured triangle
 
 ```nim
@@ -115,11 +122,6 @@ proc drawTexturedBox(canvas: SKCanvas, paint: SKPaint) =
   canvas.drawVertices(verts, Modulate, paint)
 ```
 
-```nim
-let bmp = decodeBitmap("resources/images/plasma.png")
-paint.shader = newBitmapShader(bmp)
-```
-
 ### Drawing a textured hexagon
 
 ```nim
@@ -164,7 +166,7 @@ proc drawTexturedExagon(canvas: SKCanvas, paint: SKPaint) =
   canvas.drawVertices(verts, Modulate, paint)
 ```
 
-![](_images/sample__vertex_drawing.png ':size=256x256')
+![](_images/sample__vertex_drawing.png ':size=480x360')
 
 ## `autoRestore`
 [*source*](https://github.com/mvenditto/nimskia/blob/master/nimskia/example/canvas_autorestore.nim)
