@@ -1,4 +1,4 @@
-# SKCanvas
+# SkCanvas
 
 ## `drawVertices`
 
@@ -7,13 +7,13 @@
 ### Drawing a triangle
 
 ```nim
-proc drawTriangle(canvas: SKCanvas, paint: SKPaint) =
+proc drawTriangle(canvas: SkCanvas, paint: SkPaint) =
 
   let r = 65.0
   let(cx,cy) = (hw * 0.5, hh * 0.5)
 
   let vertices = [
-    (cx + r, cy - r).SKPoint,
+    (cx + r, cy - r).SkPoint,
     (cx - r, cy - r),
     (cx, cy + r)
   ]
@@ -30,13 +30,13 @@ proc drawTriangle(canvas: SKCanvas, paint: SKPaint) =
 ### Drawing a box
 
 ```nim
-proc drawBox(canvas: SKCanvas, paint: SKPaint) =
+proc drawBox(canvas: SkCanvas, paint: SkPaint) =
 
   let r = 65.0
   let(cx,cy) = (hw * 1.5, hh * 0.5)
 
   let vertices = [
-    (cx - r, cy + r).SKPoint,
+    (cx - r, cy + r).SkPoint,
     (cx + r, cy + r),
     (cx + r, cy - r),
     (cx - r, cy - r),
@@ -56,27 +56,27 @@ proc drawBox(canvas: SKCanvas, paint: SKPaint) =
 
 ```nim
 let bmp = decodeBitmap("resources/images/plasma.png")
-paint.shader = newBitmapShader(bmp)
+paint.shader = newSkBitmapShader(bmp)
 ```
 
 ### Drawing a textured triangle
 
 ```nim
-proc drawTexturedTriangle(canvas: SKCanvas, paint: SKPaint) =
+proc drawTexturedTriangle(canvas: SkCanvas, paint: SkPaint) =
 
   let r = 65.0
   let(cx,cy) = (hw * 0.5, hh * 1.5)
 
   let vertices = [
-    (cx + r, cy - r).SKPoint,
-    (cx - r, cy - r).SKPoint,
-    (cx, cy + r).SKPoint
+    (cx + r, cy - r).SkPoint,
+    (cx - r, cy - r).SkPoint,
+    (cx, cy + r).SkPoint
   ]
 
   let(tw,th) = (512.0, 512.0)
 
   let texs = [ 
-    (0.0, 0.0).SKPoint,
+    (0.0, 0.0).SkPoint,
     (0.0, th),
     (tw, th)
   ]
@@ -89,13 +89,13 @@ proc drawTexturedTriangle(canvas: SKCanvas, paint: SKPaint) =
 ### Drawing a textured box
 
 ```nim
-proc drawTexturedBox(canvas: SKCanvas, paint: SKPaint) =
+proc drawTexturedBox(canvas: SkCanvas, paint: SkPaint) =
   
   let r = 65.0
   let(cx,cy) = (hw * 1.5, hh * 1.5)
 
   let vertices = [
-    (cx - r, cy + r).SKPoint,
+    (cx - r, cy + r).SkPoint,
     (cx + r, cy + r),
     (cx + r, cy - r),
     (cx - r, cy - r),
@@ -104,7 +104,7 @@ proc drawTexturedBox(canvas: SKCanvas, paint: SKPaint) =
   let(tw,th) = (512.0, 512.0)
 
   let texs = [ 
-    (0.0, 0.0).SKPoint,
+    (0.0, 0.0).SkPoint,
     (0.0, th),
     (tw, th),
     (0.0, th)
@@ -125,14 +125,14 @@ proc drawTexturedBox(canvas: SKCanvas, paint: SKPaint) =
 ### Drawing a textured hexagon
 
 ```nim
-proc drawTexturedExagon(canvas: SKCanvas, paint: SKPaint) =
+proc drawTexturedExagon(canvas: SkCanvas, paint: SkPaint) =
 
   var r = 64.0
   var hr = 32.0
   var(cx, cy) = (hw, hh)
 
   let vertices = [
-    (cx - hr, cy + r).SKPoint,
+    (cx - hr, cy + r).SkPoint,
     (cx - r,  cy),
     (cx - hr, cy - r),
     (cx + hr, cy - r),
@@ -153,7 +153,7 @@ proc drawTexturedExagon(canvas: SKCanvas, paint: SKPaint) =
   (cx, cy) = (256.0, 256.0)
 
   let texs = [
-    (hr, 0.0).SKPoint,
+    (hr, 0.0).SkPoint,
     (0.0, hr),
     (hr, r),
     (r, r),
@@ -174,7 +174,7 @@ proc drawTexturedExagon(canvas: SKCanvas, paint: SKPaint) =
 ```nim
 const str = "R"
 
-var textBounds = new(SKRect)
+var textBounds = new(SkRect)
 paint.measureText(str, textBounds)
 
 let tx = hw - textBounds.width / 2

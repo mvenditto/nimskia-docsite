@@ -1,4 +1,4 @@
-# SKDocument
+# SkDocument
 
 ## PDF document creation
 
@@ -29,7 +29,7 @@ proc createExampleDir() =
     removeDir(sampleTmpDir)
   createDir(sampleTmpDir)
 
-proc createPdfMetadata(): SKDocumentPdfMetadata =
+proc createPdfMetadata(): SkDocumentPdfMetadata =
   result = newPdfMetadata()
   result.author = "cool developer"
   result.creator = "cool developer library"
@@ -44,13 +44,13 @@ proc createPdf() =
   let path = joinPath(sampleTmpDir, "example.pdf")
   let meta = createPdfMetadata()
 
-  let stream = openSKFileWStream(path)
+  let stream = openSkFileWStream(path)
   let document = createPdf(stream, meta)
 
-  let paint = newPaint()
+  let paint = newSkPaint()
   paint.textSize = 64
   paint.antialias = true
-  paint.color = 0xFF9CAFB7.SKColor
+  paint.color = 0xFF9CAFB7.SkColor
   paint.strokeWidth = 3
   paint.textAlign = Center
 
@@ -60,7 +60,7 @@ proc createPdf() =
 
   # draw page 1
   let pdfCanvas = document.beginPage(width, height)
-  let nextPagePaint = newPaint()
+  let nextPagePaint = newSkPaint()
   nextPagePaint.antialias = true
   nextPagePaint.textSize = 16
   nextPagePaint.color = OrangeRed

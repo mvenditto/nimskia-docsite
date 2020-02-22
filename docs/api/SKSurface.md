@@ -1,9 +1,9 @@
-# SKSurface
+# SkSurface
 
 ## Save as image
 
 ```nim
-proc emitPng*(path: string, surface: SKSurface) =
+proc emitPng*(path: string, surface: SkSurface) =
   var image = surface.snapshot()
   defer: image.dispose()
   
