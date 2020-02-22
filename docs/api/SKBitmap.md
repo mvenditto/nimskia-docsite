@@ -1,4 +1,4 @@
-# SKBitmap
+# SkBitmap
 
 ## Read from file
 
@@ -9,8 +9,8 @@ proc readBitmapData(path: string): SKBitmap =
   let buff = alloc(length)
   var s = newFileStream(file)
   assert s.readData(buff, length.int) > 0
-  var data = newData(buff, length.int)
-  result = decodeBitmap(newCodec(data))
+  var data = newSkData(buff, length.int)
+  result = decodeBitmap(newSkCodec(data))
   s.close()
 ```
 
@@ -18,9 +18,9 @@ proc readBitmapData(path: string): SKBitmap =
 
 ```nim
 proc readBitmapStream(path: string): SKBitmap =
-  var fs = newSKFileStream(path)
+  var fs = newSkFileStream(path)
   assert fs.isValid
-  var(res,codec) = newCodec(fs)
+  var(res,codec) = newSkCodec(fs)
   assert res == Success
   result = decodeBitmap(codec)
 ```
@@ -44,13 +44,13 @@ canvas.drawBitmap(bitmap, 4, h / 2.0 - imageHeight.float / 2.0)
 ```nim
 var bitmap = readBitmapStream("resources/images/skia.png")
 
-let paint = newPaint()
+let paint = newSkPaint()
 paint.strokeWidth = 4
 paint.color = Red
 paint.style = Stroke 
 
-let annotCanvas = newCanvas(bitmap)
-var rect = newRect(
+let annotCanvas = newSkCanvas(bitmap)
+var rect = newSkRect(
   0, 
   0,
   bitmap.info.width.float,
