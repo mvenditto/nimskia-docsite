@@ -96,5 +96,5 @@ main()
 ```
 
 ```pdf
-  /api/_resources/example.pdf
+  https://rawcdn.githack.com/mvenditto/nimskia-docsite/ee6b4de25bf47882519c2ddf95bd9c4c879e156e/docs/api/_resources/example.pdf
 ```
