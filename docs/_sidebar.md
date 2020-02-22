@@ -1,5 +1,7 @@
 <!-- docs/_sidebar.md -->
 
+- ![](https://img.shields.io/static/v1?label=nimskia&message=2020.02.16_1-alpha&color=blue)
+
 - [API Reference](https://mvenditto.github.io/nimskia/index.html)
 
 - Getting started
