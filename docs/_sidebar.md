@@ -12,7 +12,7 @@
 
 - API Samples
   - [Miscellanneous](api/misc.md)
-  - [SKBitmap](api/SKBitmap.md)
-  - [SKCanvas](api/SKCanvas.md)
-  - [SKDocument](api/SKDocument.md)
-  - [SKSurface](api/SKSurface.md)
+  - [SkBitmap](api/SKBitmap.md)
+  - [SkCanvas](api/SKCanvas.md)
+  - [SkDocument](api/SKDocument.md)
+  - [SkSurface](api/SKSurface.md)
