@@ -14,4 +14,5 @@
   - [Miscellanneous](api/misc.md)
   - [SKBitmap](api/SKBitmap.md)
   - [SKCanvas](api/SKCanvas.md)
+  - [SKDocument](api/SKDocument.md)
   - [SKSurface](api/SKSurface.md)

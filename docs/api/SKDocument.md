@@ -94,3 +94,7 @@ proc main() =
 
 main()
 ```
+
+```pdf
+  /api/_resources/example.pdf
+```
